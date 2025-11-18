@@ -1,0 +1,15 @@
+{
+  "apps": [{
+    "name": "backend",
+    "script": "production.js",
+    "cwd": "D:\jzh_doc\Web Program\smart_library_backend\backend",
+    "exec_mode": "fork",
+    "max_memory_restart": "1G",
+    "autorestart": true,
+    "node_args": [],
+    "args": [],
+    "env": {
+      
+    }
+  }]
+}

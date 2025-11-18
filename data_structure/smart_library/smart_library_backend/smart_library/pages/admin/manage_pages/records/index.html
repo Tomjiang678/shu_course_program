@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>虚拟智慧图书馆 - 借阅记录管理</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../../../../components/toast/toast.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>📚 借阅记录管理</h1>
+
+        <!-- 搜索框 -->
+        <div class="search-section">
+            <input type="text" id="bookIdInput" placeholder="输入书籍ID查询谁借过">
+            <button id="searchBtn">🔍 搜索</button>
+            <button id="refreshBtn">🔄 查看全部</button>
+        </div>
+
+        <!-- 借阅记录表 -->
+        <table id="recordsTable">
+            <thead>
+                <tr>
+                    <th>书名</th>
+                    <th>用户</th>
+                    <th>开始时间</th>
+                    <th>结束时间</th>
+                    <th>是否归还</th>
+                </tr>
+            </thead>
+            <tbody id="recordsBody">
+                <tr>
+                    <td colspan="7" class="loading">加载中...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="../../../../components/toast/toast.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

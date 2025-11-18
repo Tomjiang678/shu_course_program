@@ -1,0 +1,71 @@
+/* 通用样式 */
+.search-section {
+  position: absolute;
+  top: 280px;
+  width: 250px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 50;
+}
+
+/* 修饰类：左侧布局 */
+.search-section.left {
+  left: 60px;
+}
+
+/* 修饰类：右侧布局 */
+.search-section.right {
+  right: 60px;
+  top: 0px;
+}
+
+/* 其他内部样式保持不变 */
+.search-section h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #003DA3;
+  font-size: 18px;
+}
+
+.search-section input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.search-section button {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background-color: #003DA3;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-section button:hover {
+  background-color: #0041b3;
+}
+
+#searchResults {
+  margin-top: 12px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 8px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.book-result:hover {
+  background: #f5f5f5;
+}

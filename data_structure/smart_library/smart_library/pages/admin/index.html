@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>管理员后台管理系统</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <!-- 登录界面 -->
+  <div class="login-box">
+    <h2>管理员登录</h2>
+    <input type="text" id="username" placeholder="请输入账号">
+    <input type="password" id="password" placeholder="请输入密码">
+    <button onclick="checkLogin()">登录</button>
+    <div id="msg" class="msg"></div>
+  </div>
+
+  <!-- 后台主菜单 -->
+  <div class="dashboard" id="dashboard">
+    <h2>欢迎回来，管理员 👋</h2>
+    <p>请选择您要管理的模块：</p>
+    <button class="module-btn" onclick="openModule('books')">📚 书籍管理</button>
+    <button class="module-btn" onclick="openModule('categories')">🏷 分类管理</button>
+    <button class="module-btn" onclick="openModule('users')">👤 用户管理</button>
+    <button class="module-btn" onclick="openModule('records')">📖 借阅记录</button>
+    <button class="logout-btn" onclick="logout()">退出登录</button>
+  </div>
+
+  <script src="index.js">
+    
+  </script>
+</body>
+
+</html>
+

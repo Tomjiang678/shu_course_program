@@ -1,0 +1,35 @@
+ /* Toast 容器固定在右上角 */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: auto;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* ✅ 所有 toast 向右对齐 */
+  z-index: 9999;
+}
+
+
+.toast {
+  background-color: #4caf50; /* 成功提示绿色 */
+  color: white;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateX(30px); /* ✅ 从右侧滑入更自然 */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
+  text-align: right;
+  white-space: nowrap;
+  max-width: 280px;
+}
+
+/* 出现动画 */
+.toast.show {
+  opacity: 1;
+  transform: translateX(0);
+}

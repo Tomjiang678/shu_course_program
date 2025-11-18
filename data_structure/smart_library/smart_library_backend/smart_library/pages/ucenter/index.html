@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>个人中心 - 虚拟智慧图书馆</title>
+  
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 登录/注册 -->
+    <div id="auth-section">
+      <h2 id="auth-title">登录</h2>
+      <form id="login-form">
+        <table>
+          <tr>
+            <td>用户名：</td>
+            <td><input type="text" id="username" required></td>
+          </tr>
+          <tr>
+            <td>密码：</td>
+            <td><input type="password" id="password" required></td>
+          </tr>
+        </table>
+        <button type="submit" class="btn" id="submit-btn">登录</button>
+      </form>
+      <span class="toggle" id="toggle-mode">没有账号？注册一个</span>
+    </div>
+
+    <!-- 个人中心 -->
+    <div id="center-section" class="hidden">
+      <span class="logout" onclick="logout()">退出登录</span>
+      <h2>个人中心</h2>
+      <p>欢迎，<span id="user-name"></span>！</p>
+
+      <h3>借阅记录</h3>
+      <table class="record-table" id="borrow-table">
+        <thead>
+          <tr>
+            <th>书名</th>
+            <th>借阅日期</th>
+            <th>状态</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <h3>归还记录</h3>
+      <table class="record-table" id="return-table">
+        <thead>
+          <tr>
+            <th>书名</th>
+            <th>借阅日期</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="index.js">
+  </script>
+</body>
+</html>

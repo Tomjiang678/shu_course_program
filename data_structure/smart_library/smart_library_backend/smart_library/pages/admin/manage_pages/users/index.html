@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>虚拟智慧图书馆 - 用户管理（管理员）</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>👤 用户管理</h1>
+        <div class="actions">
+            <button id="refreshBtn">🔄 刷新</button>
+            <button id="backBtn">🏠 返回主菜单</button>
+        </div>
+    </header>
+
+    <main>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>用户ID</th>
+                    <th>用户名</th>
+                    <th>用户密码</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="userBody">
+                <tr>
+                    <td colspan="4" class="loading">加载中...</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <!-- ✅ 编辑用户模态框 -->
+    <div id="editModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>✏️ 修改用户信息</h3>
+            <label>用户名</label>
+            <input type="text" id="editName" placeholder="输入新用户名">
+            <div class="modal-actions">
+                <button id="saveEditBtn">保存</button>
+                <button id="cancelEditBtn">取消</button>
+            </div>
+        </div>
+    </div>
+    <!-- 添加到你的 index.html -->
+    <div id="recordModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>📚 用户借阅记录</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>书名</th>
+                        <th>借出时间</th>
+                        <th>到期时间</th>
+                        <th>状态</th>
+                    </tr>
+                </thead>
+                <tbody id="recordTableBody"></tbody>
+            </table>
+            <button class="close-btn" onclick="closeRecordModal()">✖</button>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

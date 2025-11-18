@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-box,
+.dashboard {
+    background: #fff;
+    padding: 32px 28px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 340px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #1976d2;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #1565c0;
+}
+
+.msg {
+    margin-top: 12px;
+    font-size: 14px;
+    display: none;
+}
+
+.msg.success {
+    color: green;
+}
+
+.msg.error {
+    color: red;
+}
+
+/* 后台主界面 */
+.dashboard {
+    display: none;
+}
+
+.dashboard h2 {
+    color: #003DA3;
+    margin-bottom: 20px;
+}
+
+.module-btn {
+    width: 100%;
+    margin: 6px 0;
+    background: #0041b3;
+}
+
+.module-btn:hover {
+    background: #4a90e2;
+}
+
+.logout-btn {
+    background: #d32f2f;
+    margin-top: 16px;
+}
+
+.logout-btn:hover {
+    background: #b71c1c;
+}

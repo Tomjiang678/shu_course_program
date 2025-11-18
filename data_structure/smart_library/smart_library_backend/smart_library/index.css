@@ -1,0 +1,161 @@
+ /* 页面整体样式 */
+    body {
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    /* 顶部标题 */
+    h1 {
+      background-color: #003DA3;
+      color: white;
+      padding: 20px 0;
+      margin: 0;
+    }
+
+    /* 导航栏 */
+    ul {
+      list-style: none;
+      padding: 10px 0;
+      margin: 0;
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    ul li {
+      display: inline;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    ul li a:hover {
+      color: #4a90e2;
+    }
+
+    /* 主体文字 */
+    p {
+      margin: 20px auto;
+      max-width: 600px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    p em a {
+      color: #4a90e2;
+      text-decoration: none;
+    }
+
+    p em a:hover {
+      text-decoration: underline;
+    }
+
+    /* 推荐书籍区 */
+    .recommend {
+      margin: 20px auto 100px; /* 预留页脚空间 */
+      max-width: 1000px;
+      text-align: center;
+    }
+
+    .recommend h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .book-list {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .book {
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 150px;
+      transition: transform 0.2s;
+    }
+
+    .book:hover {
+      transform: translateY(-5px);
+    }
+
+    .book img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .search-section input[name="keyword"] {
+    font-style: italic;
+    }
+    .sidebar-right {
+  position: absolute;
+  top: 280px;   /* 根据页面内容调整 */
+  right: 90px;
+  width: 220px;
+  background: rgba(255,255,255,0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  z-index: 100;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;}
+
+    .sidebar-right h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #003DA3;
+    }
+
+    .sidebar-right input {
+  width: 90%;
+  margin: 5px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+    }
+
+    .sidebar-right button {
+  width: 90%;
+  margin: 5px 0;
+  padding: 8px;
+  background-color: #003DA3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+    }
+
+    .sidebar-right button:hover {
+  background-color: #0041b3;
+    }
+
+
+
+    /* 页脚 */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px;
+      background-color: #333;
+      color: white;
+      font-size: 14px;
+      text-align: center;
+    }
+
+

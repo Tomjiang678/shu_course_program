@@ -1,0 +1,142 @@
+body {
+    font-family: "Microsoft Yahei", sans-serif;
+    background: #f9fafb;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.toolbar {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.toolbar button {
+    margin: 0 5px;
+    padding: 8px 14px;
+    border: none;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.toolbar button:hover {
+    background: #1d4ed8;
+}
+
+.category-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.category-table th,
+.category-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.action-btn {
+    margin: 0 4px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #facc15;
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.child-row {
+    background: #f9f9f9;
+}
+
+/* 模态框默认隐藏 */
+.modal.hidden {
+    display: none;
+}
+
+/* 显示模态框时去掉 hidden */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    /* 只在显示时使用 flex */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.modal-actions {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.modal-actions button {
+    background: #2563eb;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>虚拟智慧图书馆 - 图书选择</title>
+  <link rel="stylesheet" href="index.css">
+  <!-- 引入 toast 样式 -->
+  <link rel="stylesheet" href="../../components/toast/toast.css">
+  <link rel="stylesheet" href="../../components/bookModal/bookModal.css">
+  <link rel="stylesheet" href="../../components/searchSection/searchSection.css">
+</head>
+<body>
+  <div id="toastContainer" class="toast-container"></div>
+  <!-- 搜索框 -->
+  <section class="search-section right">
+  <h2>🔍 图书搜索</h2>
+  <form id="searchForm">
+    <input type="text" id="searchKeyword" placeholder="请输入书名或作者">
+    <button type="submit">🔍</button>
+  </form>
+  <div id="searchResults"></div>
+</section>
+  <div class="container">
+    <!-- 侧边栏：分类 -->
+    <aside class="sidebar">
+      <h2>📚 图书分类</h2>
+      <ul class="category-list" id="categoryList">
+        <li>加载中...</li>
+      </ul>
+    </aside>
+
+    <!-- 主体内容 -->
+    <main class="main">
+      <h1>图书选择</h1>
+
+      <!-- 排序选项 -->
+      <div class="sort-options">
+        <span>排序方式：</span>
+        <label><input type="radio" name="sort" value="borrow_count"> 借阅次数</label>
+        <label><input type="radio" name="sort" value="stock"> 库存</label>
+        <label><input type="radio" name="sort" value="available_stock"> 可借数量</label>
+      </div>
+
+      <!-- 图书列表 -->
+      <div class="book-list" id="bookList"></div>
+
+      <!-- 翻页栏 -->
+      <div id="pagination" class="pagination"></div>
+    </main>
+  </div>
+
+  <!-- 书籍详情模态框，未来待模块化 -->
+<div id="bookModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-body">
+      <img id="detailCover" class="detail-cover" src="" alt="">
+      <div class="book-detail-text">
+        <h2 id="detailTitle"></h2>
+        <p><strong>作者：</strong><span id="detailAuthor"></span></p>
+        <p><strong>出版社：</strong><span id="detailPublisher"></span></p>
+        <p><strong>ISBN：</strong><span id="detailIsbn"></span></p>
+        <p><strong>库存：</strong><span id="detailStock"></span></p>
+        <p><strong>可借数量：</strong><span id="detailAvailable"></span></p>
+        <p><strong>借阅次数：</strong><span id="detailBorrow"></span></p>
+        <p><strong>简介：</strong></p>
+        <p id="detailSummary" class="book-summary"></p>
+
+        <!-- ✅ 新增：借阅按钮 -->
+        <div class="borrow-btn-container">
+          <button id="borrowBtn" class="borrow-btn" onclick="borrowBook()">📚 立即借阅</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="index.js"></script>
+  <!-- 引入 toast 脚本 -->
+  <script src="../../components/toast/toast.js"></script>
+  <script src="../../components/bookModal/bookModal.js"></script>
+  <script src="../../components/searchSection/searchSection.js"></script>
+</body>
+</html>
