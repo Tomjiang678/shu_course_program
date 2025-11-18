@@ -15,7 +15,7 @@
 将项目代码下载或克隆到本地。
 
 ```bash
-git clone 
+git clone "https://github.com/path/"
 ```
 > 如果是压缩包形式，请直接解压到本地目录。
 
